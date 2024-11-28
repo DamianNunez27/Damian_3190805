@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Dinosaurio</title>
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <h1>Agregar Nuevo Dinosaurio</h1>
+    <form action="/agregar" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+        <label>Tipo:</label>
+        <input type="text" name="tipo">
+        <label>Periodo:</label>
+        <input type="text" name="periodo">
+        <label>Dieta:</label>
+        <input type="text" name="dieta">
+        <label>Longitud (m):</label>
+        <input type="number" step="0.01" name="longitud">
+        <label>Peso (kg):</label>
+        <input type="number" step="0.01" name="peso">
+        <label>Descubrimiento:</label>
+        <input type="text" name="descubrimiento">
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaurios</title>
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Listado de Dinosaurios</h1>
+    </header>
+    <main>
+        <!-- Botón para agregar nuevo dinosaurio -->
+        <div class="add-button">
+            <a class="btn" href="/agregar">Agregar Nuevo Dinosaurio</a>
+        </div>
+
+        <!-- Tabla con los dinosaurios -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Periodo</th>
+                    <th>Dieta</th>
+                    <th>Longitud (m)</th>
+                    <th>Peso (kg)</th>
+                    <th>Descubrimiento</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% dinosaurios.forEach(dinosaurio => { %>
+                    <tr>
+                        <td><%= dinosaurio.nombre %></td>
+                        <td><%= dinosaurio.tipo %></td>
+                        <td><%= dinosaurio.periodo %></td>
+                        <td><%= dinosaurio.dieta %></td>
+                        <td><%= dinosaurio.longitud %></td>
+                        <td><%= dinosaurio.peso %></td>
+                        <td><%= dinosaurio.descubrimiento %></td>
+                        <td>
+                            <a class="btn" href="/editar/<%= dinosaurio.id %>">Editar</a>
+                            <a class="btn" href="/eliminar/<%= dinosaurio.id %>">Eliminar</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Dinosaurio</title>
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+    <h1>Editar Dinosaurio</h1>
+    <form action="/editar/<%= dinosaurio.id %>" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="<%= dinosaurio.nombre %>" required>
+        <label>Tipo:</label>
+        <input type="text" name="tipo" value="<%= dinosaurio.tipo %>">
+        <label>Periodo:</label>
+        <input type="text" name="periodo" value="<%= dinosaurio.periodo %>">
+        <label>Dieta:</label>
+        <input type="text" name="dieta" value="<%= dinosaurio.dieta %>">
+        <label>Longitud (m):</label>
+        <input type="number" step="0.01" name="longitud" value="<%= dinosaurio.longitud %>">
+        <label>Peso (kg):</label>
+        <input type="number" step="0.01" name="peso" value="<%= dinosaurio.peso %>">
+        <label>Descubrimiento:</label>
+        <input type="text" name="descubrimiento" value="<%= dinosaurio.descubrimiento %>">
+        <button type="submit">Actualizar</button>
+    </form>
+</body>
+</html>
